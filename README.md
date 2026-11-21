@@ -59,3 +59,7 @@ If the pack store is a git repository, the skill works in a worktree or branch o
 - **Logins are yours to do.** The skill never asks for a password and does not use browser cookies to pass a login wall.
 
 You are responsible for having the right to use any material you give the skill.
+
+## License
+
+Licensed under the [Apache License, Version 2.0](LICENSE).
