@@ -1,6 +1,6 @@
 ---
 name: ui-pack-create
-description: Use when making a new UI design system pack - from an existing project's source code, or without source from a website URL, SNS post link (reel, video), screenshot, image or video - or when syncing or editing an existing pack. Not for applying a pack to a project - that is the ui-pack skill. Triggers - "turn this project's UI into a pack", "make a pack", "make a pack from this site", "UI pack from this link", "pack from screenshots", "inspired pack", "sync the pack", "edit the pack", "이 프로젝트 UI를 팩으로", "팩 만들기", "이 사이트로 팩 만들어", "이 링크로 UI 팩", "캡처로 팩", "영감 팩", "팩 동기화", "팩 고치기", "/ui-pack-create".
+description: Use when making a new UI design system pack - from an existing project's source code, or without source from a website URL, SNS post link (reel, video), screenshot, image or video - or when syncing or editing an existing pack. Not for applying a pack to a project - that is the ui-pack skill. Triggers - "turn this project's UI into a pack", "make a pack", "make a pack from this site", "UI pack from this link", "pack from screenshots", "inspired pack", "sync the pack", "edit the pack", "/ui-pack-create".
 ---
 
 # ui-pack-create
