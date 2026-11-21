@@ -1,0 +1,51 @@
+node_modules/
+.next/
+out/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Added by github-init
+
+# logs
+*.log
+logs/
+
+# temporary files
+*.tmp
+*.temp
+
+# env files (example and template files stay tracked)
+.env*
+!.env*.example
+!.env*.template
+
+# editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+
+# claude code (instructions, local settings, session worktrees, MCP config)
+CLAUDE.md
+.claude/
+.claude.json
+.claude.json.*
+.claude-*.json
+
+# superpowers (auto-installed working notes)
+.superpowers/
+docs/superpowers/
+
+# axt local profile (including backups)
+.axt/
+.axt-*
+.axt.*
+
+# ast (agent session tracker) local state
+.ast/
+.ast-*
+.ast.*
