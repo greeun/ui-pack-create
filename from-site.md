@@ -62,7 +62,13 @@ Fetch the content of one post only. Remove the `?` and everything after it from 
 yt-dlp --no-playlist --write-info-json --write-thumbnail -o "<collection dir>/post.%(ext)s" "<post URL with the ? and everything after it removed>"
 ```
 
-- If it requires a login or cookies, do not work around it (do not use `--cookies-from-browser`). Ask the user to download the file themselves. Do not fetch a whole profile or feed.
+For a Threads post (`threads.com` or `threads.net`), yt-dlp has no extractor. Use this instead; it reads only the public embed page of the post and writes the same `post.*` files and `post.info.json`:
+
+```bash
+python3 ~/.claude/skills/ui-pack-create/scripts/threads-post.py "<post URL>" "<collection dir>"
+```
+
+- If it requires a login or cookies, do not work around it (do not use `--cookies-from-browser`). Ask the user to download the file themselves. The same applies when `threads-post.py` ends with "Not collecting" (exit code 3). Do not fetch a whole profile or feed.
 - Read the caption (`description` in `post.info.json`). What the screen is for and the design intent the author stresses are the evidence for sections 1 and 2 of the design guide. Record the author and the account in `origin.credit`. If the caption has a public link to the original design (Figma, Dribbble and the like), write it in the report.
 - Analyse the video and images with "Images and video" below.
 
