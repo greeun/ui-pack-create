@@ -18,7 +18,7 @@ A UI pack is a folder that holds one screen design: color, type and spacing toke
 | `~/.claude/skills/ui-pack/catalog.json` | The component catalog (the standard list of components). Each pack records a status per component in `components` of its `pack.json` |
 | `~/.claude/skills/ui-pack/scripts/` | `install.py` (install), `build-view.py` (pack viewer), `gallery-check.mjs` (gallery comparison), `compare.py` (before/after comparison of an application) |
 | `~/.claude/skills/ui-pack/viewer/` | The Next.js template that builds the pack viewer. The `next` version in `viewer/package.json` is the reference version for the empty test project |
-| `~/.claude/skills/ui-pack-create/scripts/` | Tools used only when making packs: `site-collect.mjs`, `site-fidelity.mjs`, `origin-check.mjs`, `shot-compare.py`, `image-colors.py`, `cdp.mjs`, `source-changes.py`, `threads-post.py` |
+| `~/.claude/skills/ui-pack-create/scripts/` | Tools used only when making packs: `site-collect.mjs`, `site-fidelity.mjs`, `origin-check.mjs`, `shot-compare.py`, `image-colors.py`, `cdp.mjs`, `source-changes.py`, `threads-post.py`, `instagram-post.py` |
 
 ## Actions
 
