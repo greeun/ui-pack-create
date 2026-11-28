@@ -48,6 +48,8 @@ If the pack store is a git repository, the skill works in a worktree or branch o
 | `scripts/origin-check.mjs` | Checks the origin record in `pack.json`; for an inspired pack, that no source name, proprietary font or brand color remains |
 | `scripts/shot-compare.py` | Compares a source image with a capture of a screen redrawn from pack components |
 | `scripts/image-colors.py` | Measures colors in regions of an image |
+| `scripts/threads-post.py` | Fetches the caption, video and images of one public Threads post from its embed page (yt-dlp has no Threads extractor). No login, no cookies |
+| `scripts/instagram-post.py` | Fetches the caption, images and video of one public Instagram post from its embed page, every carousel item in order (yt-dlp gets only the caption of image posts). No login, no cookies |
 | `scripts/source-changes.py` | Lists source files that changed since the pack was extracted |
 | `scripts/cdp.mjs` | Shared Chrome DevTools Protocol helpers used by the three `.mjs` scripts |
 

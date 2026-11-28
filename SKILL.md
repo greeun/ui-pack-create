@@ -18,7 +18,7 @@ A UI pack is a folder that holds one screen design: color, type and spacing toke
 | `~/.claude/skills/ui-pack/catalog.json` | The component catalog (the standard list of components). Each pack records a status per component in `components` of its `pack.json` |
 | `~/.claude/skills/ui-pack/scripts/` | `install.py` (install), `build-view.py` (pack viewer), `gallery-check.mjs` (gallery comparison), `compare.py` (before/after comparison of an application) |
 | `~/.claude/skills/ui-pack/viewer/` | The Next.js template that builds the pack viewer. The `next` version in `viewer/package.json` is the reference version for the empty test project |
-| `~/.claude/skills/ui-pack-create/scripts/` | Tools used only when making packs: `site-collect.mjs`, `site-fidelity.mjs`, `origin-check.mjs`, `shot-compare.py`, `image-colors.py`, `cdp.mjs`, `source-changes.py` |
+| `~/.claude/skills/ui-pack-create/scripts/` | Tools used only when making packs: `site-collect.mjs`, `site-fidelity.mjs`, `origin-check.mjs`, `shot-compare.py`, `image-colors.py`, `cdp.mjs`, `source-changes.py`, `threads-post.py`, `instagram-post.py` |
 
 ## Actions
 
@@ -33,10 +33,10 @@ When you receive both source code and a URL, the source code is the reference ([
 
 ## Common rules
 
-- Packs are made and edited in the pack store. If the pack store (`$UI_PACK_HOME`) is a git repository, work in a worktree or branch of that repository and commit there. Other projects see the pack only after the branch is merged; ask the user when to merge. If the pack store is not a git repository, edit in place and say so in the report.
+- Packs are made and edited in the pack store. If the pack store (`$UI_PACK_HOME`) is a git repository, work in a worktree or branch of that repository and commit there. Other projects see the pack only after the branch is merged; ask the user when to merge, and push the merged branch when the pack store has a remote. `ui-pack/scripts/fetch.py` and the `ui-pack-telegram` bot are the exceptions: they add a new pack on the checked-out branch and commit (and push) it themselves. If the pack store is not a git repository, edit in place and say so in the report.
 - While you work in a worktree of the pack store, the pack folder is the worktree's `packs/<pack>`. Pass that folder wherever a command below takes `<pack>` (a new pack and an edited pack exist only in the worktree until the merge).
 - The skill files (`~/.claude/skills/ui-pack/`, `~/.claude/skills/ui-pack-create/`) are edited in their own repositories, not in the pack store. If an installed skill folder is a link into a repository's working tree, do not edit files through the link; work in a worktree or branch of that repository.
-- After making or editing a pack, rebuild the pack viewer with `python3 ~/.claude/skills/ui-pack/scripts/build-view.py <pack>` and commit it together with the pack.
+- After making or editing a pack, rebuild the pack viewer with `python3 ~/.claude/skills/ui-pack/scripts/build-view.py <pack>` and commit the pack. When the pack store is a git repository, its `.gitignore` leaves out the rebuilt `view/index.html` and `packs/index.html`; the preview images in `view/` are committed.
 - When you add a component definition to `catalog.json`, also record that component as `absent` in the `pack.json` of every other pack and rebuild the pack viewers of those packs.
 - The design quality review (an anti-slop review skill) is done only in this skill, when the pack is made. It is not done when a pack is applied.
 
